@@ -4,8 +4,8 @@ The following code is used to edge color a bipartite graph using alternating(a,b
 Input
 
 a. nl,nr and m, the numbers of left column vertices, right column vertices, and edges. nl <= nr <=50 and m <=1000.
-b. m lines, each giving an edge: left column vertex, right column vertex. Left column vertices are numbered 0 . . . nl-
-   1. Right column vertices are numbered 0 . . . nr- 1. Duplicate edges will not occur.
+b. m lines, each giving an edge: left column vertex, right column vertex. Left column vertices are numbered 0 . . . nl-1.
+   Right column vertices are numbered 0 . . . nr- 1. Duplicate edges will not occur.
 
 Output
 
