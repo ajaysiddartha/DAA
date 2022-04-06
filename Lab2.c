@@ -34,6 +34,7 @@ int main()
 {
     int nl,nr,m;
     int maxLeft=0,maxRight=0;
+    int i,j,k,l;
    
     scanf("%d",&nl);
     scanf("%d",&nr);
@@ -48,7 +49,7 @@ int main()
     
     int colors=m/nl;
     
-    for(int i=0;i<m;i++)
+    for(i=0;i<m;i++)
     {
         scanf("%d",&edge[i].vertexLeft);
         scanf("%d",&edge[i].vertexRight);
@@ -71,15 +72,15 @@ int main()
 //**************************************************************  Case1  ****************************************************************
 
 
-    for(int i=0;i<m;i++) //For edges
+    for(i=0;i<m;i++) //For edges
     {
         char colorAvailable='N';
-        for(int j=0;j<colors;j++) // For colors
+        for(j=0;j<colors;j++) // For colors
         {
             //printf("%d %d %d\n",edge[i].colorsUsedLeft,edge[i].colorsUsedRight,edge[i].edgecolor);
             
             int color;
-            for(int k=0;k<m;k++)
+            for(k=0;k<m;k++)
             {
                 if((edge[k].vertexLeft==edge[i].vertexLeft && edge[k].vertexRight<maxRight) || (edge[k].vertexLeft<maxLeft && edge[k].vertexRight==edge[i].vertexRight))
                 {
@@ -115,13 +116,13 @@ int main()
             int a,b;
             
 //***************************************************************   Find "a" ***************************************************************************
-            for(int k=0;k<nl;k++)
+            for(k=0;k<nl;k++)
             {
                 if(a==k-1)
                 {
                     break;
                 }
-                 for(int l=i;l>=0;l--)
+                 for(l=i;l>=0;l--)
                 {
                      if(edge[l].vertexLeft==edge[i].vertexLeft)
                      {
@@ -140,13 +141,13 @@ int main()
             
 //**************************************************************  Find "b" ******************************************************************************************
 
-           for(int k=0;k<nl;k++)
+           for(k=0;k<nl;k++)
             {
                 if(b==k-1)
                 {
                     break;
                 }
-                 for(int l=i;l>=0;l--)
+                 for(l=i;l>=0;l--)
                 {
                      if(edge[l].vertexRight==edge[i].vertexRight)
                      {
@@ -171,7 +172,7 @@ int main()
             int curredge=i;
             int nextvertex;
             printf("Case 2: edge %d (%d %d) gets color a=%d, swaps with b=%d",i,edge[i].vertexLeft,edge[i].vertexRight,a,b);
-            for(int k=i;k>=0;k--)
+            for(k=i;k>=0;k--)
                {
                    //printf("%d %d %d\n",edge[k].vertexRight,edge[currvertex].vertexRight,edge[k].edgecolor);
                    if(edge[k].vertexRight==edge[i].vertexRight && edge[k].edgecolor==a)
@@ -188,7 +189,7 @@ int main()
                while(nextpath=='T')
                {
                    //left to right
-                   for(int k=0;k<m;k++)
+                   for(k=0;k<m;k++)
                    {
                       //printf(" %d %d %d  %d %d %d ",edge[k].vertexLeft,edge[k].edgecolor,edge[k].vertexRight,edge[curredge].vertexLeft,b,edge[curredge].vertexRight);
                        if(edge[k].vertexLeft==edge[curredge].vertexLeft && edge[k].edgecolor==b && edge[k].vertexRight!=edge[curredge].vertexRight)
@@ -200,7 +201,7 @@ int main()
                        }
                    }
                    //right to left
-                   for(int k=0;k<m;k++)
+                   for(k=0;k<m;k++)
                    {
                        if(edge[k].vertexRight==edge[curredge].vertexRight && edge[k].edgecolor==a && edge[k].vertexLeft!=edge[curredge].vertexLeft)
                        {
@@ -225,7 +226,7 @@ int main()
         }
     }
     
-    for(int i=0;i<m;i++)
+    for(i=0;i<m;i++)
     {
         printf("%d %d %d\n",edge[i].vertexLeft,edge[i].vertexRight,edge[i].edgecolor);
     }
