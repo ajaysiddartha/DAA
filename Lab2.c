@@ -26,7 +26,6 @@ References:
 struct graph
 {
     int vertexLeft, vertexRight;
-    int colorsUsedLeft,colorsUsedRight;
     int edgecolor;
 };
 
