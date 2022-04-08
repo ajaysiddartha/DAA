@@ -188,7 +188,7 @@ int main()
                while(nextpath=='T')
                {
                    //left to right
-                   for(k=0;k<m;k++)
+                   for(k=0;k<i;k++)
                    {
                       //printf(" %d %d %d  %d %d %d ",edge[k].vertexLeft,edge[k].edgecolor,edge[k].vertexRight,edge[curredge].vertexLeft,b,edge[curredge].vertexRight);
                        if(edge[k].vertexLeft==edge[curredge].vertexLeft && edge[k].edgecolor==b && edge[k].vertexRight!=edge[curredge].vertexRight)
@@ -200,7 +200,7 @@ int main()
                        }
                    }
                    //right to left
-                   for(k=0;k<m;k++)
+                   for(k=0;k<i;k++)
                    {
                        if(edge[k].vertexRight==edge[curredge].vertexRight && edge[k].edgecolor==a && edge[k].vertexLeft!=edge[curredge].vertexLeft)
                        {
