@@ -52,8 +52,6 @@ int main()
     {
         scanf("%d",&edge[i].vertexLeft);
         scanf("%d",&edge[i].vertexRight);
-        edge[i].colorsUsedLeft=2500;
-        edge[i].colorsUsedRight=2500;
         edge[i].edgecolor=2500;
         if(maxLeft<edge[i].vertexLeft)
         {
